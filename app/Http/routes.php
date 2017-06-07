@@ -15,16 +15,6 @@ $app->get('/', function () use ($app) {
     return $app->version();
 });
 
-
-$app->group(['prefix' => 'api/v1','namespace' => 'App\Http\Controllers'], function($app)
-{
-    $app->get('car','CarController@index');
-    $app->delete('car/{id}','CarController@deleteCar');
-    $app->post('car','CarController@createCar');
-    $app->put('car/{id}','CarController@updateCar');
-});
-
-
 require('routes/routesUsuario.php');
 require('routes/routesCategoria.php');
 require('routes/routesSubcategoria.php');
