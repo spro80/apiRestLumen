@@ -22,6 +22,7 @@ class CategoriaController extends Controller{
         
     }
     
+
     public function getAllCategoria(){
  
         try{

@@ -22,11 +22,11 @@ $app->group(['prefix' => 'api/sistema','namespace' => 'App\Http\Controllers'], f
     $app->get('usuario/loginUsuario/param1/{param1}/param2/{param2}','UsuarioController@loginUsuario');
     
     //URL TEST POSTMAN
-    //GET     http://localhost:8083/api/sistema/usuario                            //EJEMPLO: ALL GET        - OK
-    //DELETE  http://localhost:8083/api/sistema/usuario/05997002                   //EJEMPLO: DELETE         - OK
-    //POST    http://localhost:8083/api/sistema/usuario                            //EJEMPLO: POST (CREATE)  - OK
-    //PUT     http://localhost:8083/api/sistema/categoria/4                        //EJEMPLO: PUT (UPDATE)   - OK
+    //GET     http://localhost:8083/api/sistema/usuario                                        //EJEMPLO: ALL GET        - OK
+    //DELETE  http://localhost:8083/api/sistema/usuario/05997002                               //EJEMPLO: DELETE         - OK
+    //POST    http://localhost:8083/api/sistema/usuario                                        //EJEMPLO: POST (CREATE)  - OK
+    //PUT     http://localhost:8083/api/sistema/usuario/14515778                               //EJEMPLO: PUT (UPDATE)   - OK
     
-    //http://localhost:8083/api/sistema/usuario/getById/137452758		           //EJEMPLO: GET with 1 parameter - OK
-    //http://localhost:8083/api/sistema/usuario/loginUsuario/param1/137452758/param2/123456     //EJEMPLO: GET with 2 parameter - OK
+    //http://localhost:8083/api/sistema/usuario/getById/137452758                              //EJEMPLO: GET with 1 parameter - OK
+    //http://localhost:8083/api/sistema/usuario/loginUsuario/param1/137452758/param2/123456    //EJEMPLO: GET with 2 parameter - OK
 });

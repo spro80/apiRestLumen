@@ -16,9 +16,18 @@ class UsuarioController extends Controller{
     
     public function prueba()
     {
-		return "PRUEBASS";
+        return "PRUEBASS";
     }
     
+
+	/**
+	 * @api {get} /usuario
+	 * @apiName getAllUsuario
+	 * @apiDescription Get All Usuario
+	 * @apiGroup Usuario
+	 * @apiExample {curl} Example usage:
+	 *                    curl -i http://localhost:8083/api/sistema/usuario
+	*/    
     public function getAllUsuario(){
  
         try{
@@ -44,6 +53,15 @@ class UsuarioController extends Controller{
         return response()->json($response);
     }
 
+
+	/**
+	 * @api {get} /usuario/getById/:id
+	 * @apiName getById
+	 * @apiDescription Get Usuario By Id
+	 * @apiGroup Usuario
+	 * @apiExample {curl} Example usage:
+	 *                    curl -i http://localhost:8083/api/sistema/usuario/getById/13745275
+	*/
     public function getById( $param1 ){
    
         $campoBD = 'id_usuario';
@@ -87,6 +105,15 @@ class UsuarioController extends Controller{
         return response()->json($response);
     }
 
+
+	/**
+	 * @api {get} /usuario/param1/137452758/param2/123456
+	 * @apiName loginUsuario
+	 * @apiDescription Get Usuario Login
+	 * @apiGroup Usuario
+	 * @apiExample {curl} Example usage:
+	 *                    curl -i http://localhost:8083/api/sistema/usuario/loginUsuario/param1/137452758/param2/123456
+	*/
     public function loginUsuario( $param1, $param2 ){
 
         $campoBD1 = 'rut_completo_usuario';
@@ -132,6 +159,14 @@ class UsuarioController extends Controller{
     }
 
 
+	/**
+	 * @api {delete} /usuario/:id
+	 * @apiName deleteUsuario
+	 * @apiDescription Delete Usuario by Id
+	 * @apiGroup Usuario
+	 * @apiExample {curl} Example usage:
+	 *                    curl -X DELETE http://localhost:8083/api/sistema/usuario/13745275
+	*/
     public function deleteUsuario( $id ){
 
         try{
@@ -166,6 +201,14 @@ class UsuarioController extends Controller{
     }
 
 
+	/**
+	 * @api {post} /usuario
+	 * @apiName createUsuario
+	 * @apiDescription Create Usuario
+	 * @apiGroup Usuario
+	 * @apiExample {curl} Example usage:
+	 *                    curl -i -X POST -H "Content-Type:application/json" http://localhost:8083/api/sistema/usuario -d '{"id_usuario":"13745275", "id_tipo_cliente":1, "rut_completo_usuario":"137452758", "password_usuario":"123456", "digito_rut_usuario":"8", "nombre_usuario":"carolina andrea", "apellido_paterno_usuario":"cortes", "apellido_materno_usuario":"sierra", "ciudad_usuario":"santiago", "comuna_usuario":"santiago", "direccion_usuario":"fray", "nro_direccion":190, "celular_usuario":"94298318", "email_usuario":"candrea@gmail.com", "whatsap_usuario":"56912345678", "tipo_admin_usuario":1, "vigencia_usuario":1}'
+	*/
     public function createUsuario(Request $request){
         
         try
@@ -191,8 +234,16 @@ class UsuarioController extends Controller{
         
         return response()->json( $response );
     }
-    
 
+
+	/**
+	 * @api {put} /usuario/:id
+	 * @apiName updateUsuario
+	 * @apiDescription Update Usuario
+	 * @apiGroup Usuario
+	 * @apiExample {curl} Example usage:
+	 *                    curl -H "Content-Type:application/json" -X PUT "Content-Type:application/json" http://localhost:8083/api/sistema/usuario/13745275 -d '{"nombre_usuario":"aracelli diaz"}'
+	*/
     public function updateUsuario(Request $request, $id){
 
         try{
