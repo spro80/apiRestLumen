@@ -23,16 +23,20 @@ The Lumen framework is open-sourced software licensed under the [MIT license](ht
 
 
 ########################################################################
-###Run Server
+### Run Server
 
 Una vez descargado la API REST, debe ser copiada en el Web Server.
 Ingresar en la raiz del proyecto descargado y ejecutar el siguiente comando:
 
 php -S localhost:8083 -t public
 
+Opcionalmente, pueden ejecutar el runServer.sh (contiene el comando a ejecutar), que esta en la raiz del proyecto desde la consola:
+
+bash runServer.sh
+
 
 ########################################################################
-###Open API WEB.
+### Open API WEB.
 
 Para ver la especificacion de cada uno de los metodos de la API, debemos ingresar en el navegador URL lo siguiente:
 
@@ -40,10 +44,11 @@ http://localhost/apiRestLumen/apidoc/index.html
 
 
 ########################################################################
-###Modificar URl o informaciond de los metodos:
+### Modificar URl o informaciond de los metodos:
 
 En caso de que se hayan actualizados la informacion de los metodos del API REST, debemos actualizar el contenido de la WEB
-de la API. 
+de la API.
+
 Para hacer esto, debemos situarnos en la raiz del proyecto y ejecutar el siguiente comando:
 
 apidoc -i app/ -o apidoc/
